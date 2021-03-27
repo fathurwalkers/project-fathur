@@ -8,19 +8,19 @@ class CreateDetailsTable extends Migration
 {
     public function up()
     {
-        Schema::create('details', function (Blueprint $table) {
+        Schema::create('detail', function (Blueprint $table) {
             $table->id();
-            $tablbe->string('detail_nama');
-            $tablbe->string('detail_telepon');
-            $tablbe->string('detail_alamat');
-            $tablbe->string('detail_jeniskelamin');
-            $tablbe->string('detail_foto')->nullable();
+            $table->string('detail_nama');
+            $table->string('detail_telepon');
+            $table->string('detail_alamat');
+            $table->string('detail_jeniskelamin');
+            $table->string('detail_foto')->nullable();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('details');
+        Schema::dropIfExists('detail');
     }
 }
