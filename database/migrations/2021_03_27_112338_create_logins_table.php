@@ -20,7 +20,6 @@ class CreateLoginsTable extends Migration
             $table->string('email');
             $table->string('level');
             $table->string('token');
-            $table->string('security_question');
 
             $table->unsignedBigInteger('detail_id')->nullable();
             $table->foreign('detail_id')->references('id')->on('detail')->onDelete('cascade');
